@@ -1,0 +1,14 @@
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\bin\Debug\net8.0\App.Repositories.deps.json
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\bin\Debug\net8.0\App.Repositories.runtimeconfig.json
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\bin\Debug\net8.0\App.Repositories.dll
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\bin\Debug\net8.0\App.Repositories.pdb
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.csproj.AssemblyReference.cache
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.AssemblyInfoInputs.cache
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.AssemblyInfo.cs
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.dll
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\refint\App.Repositories.dll
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.pdb
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\App.Repositories.genruntimeconfig.cache
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\NetCoreApiWEB\Repositories\obj\Debug\net8.0\ref\App.Repositories.dll
