@@ -1605,7 +1605,10 @@
         },
         "runtime": {
           "bin/placeholder/App.Services.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4548,11 +4551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\App.API\\App.API.csproj",
+      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\App.API\\App.API.csproj",
       "projectName": "App.API",
-      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\App.API\\App.API.csproj",
+      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\App.API\\App.API.csproj",
       "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\App.API\\obj\\",
+      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\App.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4574,8 +4577,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Services\\App.Services.csproj": {
-              "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Services\\App.Services.csproj"
+            "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Services\\App.Services.csproj": {
+              "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Services\\App.Services.csproj"
             }
           }
         }

@@ -2775,11 +2775,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Services\\App.Services.csproj",
+      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Services\\App.Services.csproj",
       "projectName": "App.Services",
-      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Services\\App.Services.csproj",
+      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Services\\App.Services.csproj",
       "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Services\\obj\\",
+      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2801,8 +2801,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Repositories\\App.Repositories.csproj": {
-              "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Repositories\\App.Repositories.csproj"
+            "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Repositories\\App.Repositories.csproj": {
+              "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Repositories\\App.Repositories.csproj"
             }
           }
         }
@@ -2834,6 +2834,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

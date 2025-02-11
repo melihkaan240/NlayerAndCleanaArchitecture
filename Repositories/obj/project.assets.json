@@ -4111,11 +4111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Repositories\\App.Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Repositories\\App.Repositories.csproj",
       "projectName": "App.Repositories",
-      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Repositories\\App.Repositories.csproj",
+      "projectPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Repositories\\App.Repositories.csproj",
       "packagesPath": "C:\\Users\\melih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\Yeni\\Repositories\\obj\\",
+      "outputPath": "C:\\Users\\melih\\OneDrive\\Masaüstü\\.NETProject\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
