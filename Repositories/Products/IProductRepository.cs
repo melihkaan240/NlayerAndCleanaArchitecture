@@ -9,6 +9,9 @@ namespace App.Repositories.Products
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
+        //Task<Product> GetByIdAsync(int id);
+
+        //public Task<List<Product>> GetByIdAsync(int id);
         public Task<List<Product>> GetTopPriceProductsAsync(int count);
     }
 }

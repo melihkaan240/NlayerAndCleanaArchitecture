@@ -33,6 +33,6 @@ namespace App.Repositories
 
         public IQueryable<T> Where(Expression<Func<T, bool>> predicate) => _dbSet.Where(predicate).AsNoTracking();
 
-
+       
     }
 }
