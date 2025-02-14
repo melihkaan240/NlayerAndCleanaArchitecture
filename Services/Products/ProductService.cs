@@ -49,12 +49,22 @@ namespace App.Services.Products
             var product = await productRepository.GetByIdAsync(id);
             if (product is null)
             {
-                ServiceResult<ProductDto?>.Fail("Product not found", HttpStatusCode.NotFound);
+                return ServiceResult<ProductDto?>.Fail("Product not found", HttpStatusCode.NotFound);
             }
 
             var productAsDto = new ProductDto(product!.Id, product.Name, product.Price, product.Stock);
 
             return ServiceResult<ProductDto?>.Success(productAsDto)!;
+        }
+
+        public async Task<ServiceResult<List<ProductDto>>> GetPagedAllListAsync(int pageNumber, int pageSize)
+        {
+            int skip = (pageNumber - 1) * pageSize;
+
+            var products = await productRepository.GetAll().Skip((pageNumber - 1) * pageSize).ToListAsync();
+            var productsAsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price, p.Stock)).ToList();
+
+            return ServiceResult<List<ProductDto>>.Success(productsAsDto);
         }
 
         public async Task<ServiceResult<CreateProductResponse>> CreateAsync(CreateProductRequest request)
@@ -75,16 +85,16 @@ namespace App.Services.Products
             var product = await productRepository.GetByIdAsync(id);
             if (product is null)
             {
-                ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
+                return ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
             }
 
             product.Name = request.Name;
             product.Price = request.Price;
             product.Stock = request.Stock;
 
-            await productRepository.AddAsync(product);
+            productRepository.Update(product);
             await unitOfWork.SaveChangesAsync();
-            return ServiceResult.Success();
+            return ServiceResult.Success(HttpStatusCode.NoContent);
         }
 
         public async Task<ServiceResult> DeleteAsync(int id)
@@ -92,14 +102,12 @@ namespace App.Services.Products
             var product = await productRepository.GetByIdAsync(id);
             if (product is null)
             {
-                ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
+                return ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
             }
-
-           
 
             productRepository.Delete(product);
             await unitOfWork.SaveChangesAsync();
-            return ServiceResult.Success();
+            return ServiceResult.Success(HttpStatusCode.NoContent);
         }
 
     }

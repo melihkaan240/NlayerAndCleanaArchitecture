@@ -17,7 +17,7 @@ namespace App.Repositories
 
 
 
-        public void Delete(T entity) => _dbSet.Remove(entity);
+        public void Delete(T? entity) => _dbSet.Remove(entity);
        
 
         public IQueryable<T> GetAll() => _dbSet.AsQueryable().AsNoTracking();
