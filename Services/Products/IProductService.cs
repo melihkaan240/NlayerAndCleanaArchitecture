@@ -15,5 +15,6 @@ namespace App.Services.Products
         Task<ServiceResult> DeleteAsync(int id);
         Task<ServiceResult<List<ProductDto>>> GetAllListAsync();
         Task<ServiceResult<List<ProductDto>>> GetPagedAllListAsync(int pageNumber, int pageSize);
+        Task<ServiceResult> UpdateStockAsync(UpdateProductStockRequest req);
     }
 }

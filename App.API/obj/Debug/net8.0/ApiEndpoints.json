@@ -98,5 +98,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "App.API.Controllers.ProductsController",
+    "Method": "UpdateStock",
+    "RelativePath": "stock",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "App.Services.Products.UpdateProductStockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -76,9 +76,9 @@ namespace App.Services.Products
                 Stock = request.Stock,
             };
 
-            await productRepository.AddAsync(product);
+            productRepository.AddAsync(product);
             await unitOfWork.SaveChangesAsync();
-            return ServiceResult<CreateProductResponse>.Success(new CreateProductResponse(product.Id));
+            return ServiceResult<CreateProductResponse>.SuccessAsCreated(new CreateProductResponse(product.Id), $"api/products/{product.Id}");
         }
         public async Task<ServiceResult> UpdateAsync(int id, UpdateProductRequest request)
         {
@@ -110,5 +110,20 @@ namespace App.Services.Products
             return ServiceResult.Success(HttpStatusCode.NoContent);
         }
 
+
+        public async Task<ServiceResult> UpdateStockAsync(UpdateProductStockRequest req)
+        {
+            var product = await productRepository.GetByIdAsync(req.ProductId);
+
+            if (product is null)
+            {
+                return ServiceResult.Fail("Product not found", HttpStatusCode.NotFound);
+            }
+
+            product.Stock = req.Quantity;
+            productRepository.Update(product);
+            await unitOfWork.SaveChangesAsync();
+            return ServiceResult.Success(HttpStatusCode.NoContent);
+        }
     }
 }
