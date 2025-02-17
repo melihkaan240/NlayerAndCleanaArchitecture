@@ -162,7 +162,7 @@
         }
       }
     },
-    "/stock": {
+    "/api/Products/stock": {
       "patch": {
         "tags": [
           "Products"

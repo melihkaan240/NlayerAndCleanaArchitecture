@@ -102,7 +102,7 @@
   {
     "ContainingType": "App.API.Controllers.ProductsController",
     "Method": "UpdateStock",
-    "RelativePath": "stock",
+    "RelativePath": "api/Products/stock",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
