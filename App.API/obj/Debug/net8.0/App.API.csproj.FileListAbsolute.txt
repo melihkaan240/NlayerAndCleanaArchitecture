@@ -290,3 +290,4 @@ C:\Users\melih\OneDrive\Masaüstü\.NETProject\App.API\obj\Debug\net8.0\ref\App.
 C:\Users\melih\OneDrive\Masaüstü\.NETProject\App.API\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\melih\OneDrive\Masaüstü\.NETProject\App.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\melih\OneDrive\Masaüstü\.NETProject\App.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\melih\OneDrive\Masaüstü\.NETProject\App.API\bin\Debug\net8.0\AutoMapper.dll
