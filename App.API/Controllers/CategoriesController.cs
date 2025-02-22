@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Runtime.InteropServices;
+using App.Repositories.Products;
+using App.Services.Filters;
+using App.Repositories.Categories;
 
 namespace App.API.Controllers
 {
@@ -54,11 +57,15 @@ namespace App.API.Controllers
             return CreateActionResult(await categoryService.CreateAsync(request));
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Category, int>))]
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCategory(int id, UpdateCategoryRequest request)
         {
             return CreateActionResult(await categoryService.UpdateAsync(id, request));
         }
+
+        [ServiceFilter(typeof(NotFoundFilter<Category, int>))]
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)

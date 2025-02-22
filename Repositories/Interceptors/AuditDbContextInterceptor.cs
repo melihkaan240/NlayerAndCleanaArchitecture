@@ -35,7 +35,12 @@ namespace App.Repositories.Interceptors
             {
                 if (entityEntry.Entity is not IAuditEntity auditEntity) continue;
 
-                _behaviors[entityEntry.State](eventData.Context,auditEntity);
+
+                if (entityEntry.State != EntityState.Added && entityEntry.State != EntityState.Modified) continue;
+
+
+                _behaviors[entityEntry.State](eventData.Context, auditEntity);
+
 
                 //    switch (entityEntry.State)
                 //    {

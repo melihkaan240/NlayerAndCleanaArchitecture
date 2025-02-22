@@ -1,10 +1,13 @@
-﻿using System.Linq.Expressions;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 
 namespace App.Repositories.Extensions
 {
-    public interface IGenericRepository<T>
+    public interface IGenericRepository<T,TId> where T : class where TId: struct
     {
+
+        public Task<bool> AnyAsync(TId id);
         ValueTask AddAsync(T entity);
 
         // Bir entity'yi siler

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Repositories.Products
 {
-    public interface IProductRepository : IGenericRepository<Product>
+    public interface IProductRepository : IGenericRepository<Product,int>
     {
         //Task<Product> GetByIdAsync(int id);
 

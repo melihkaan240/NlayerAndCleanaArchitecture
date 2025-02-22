@@ -7,7 +7,7 @@
 
     namespace App.Repositories.Products
     {
-        public class ProductRepository(AppDBContext context) : GenericRepository<Product>(context), IProductRepository
+        public class ProductRepository(AppDBContext context) : GenericRepository<Product,int>(context), IProductRepository
         {
         // task from result dikkat et 
         //    public Task<Product> GetByIdAsync(int id)

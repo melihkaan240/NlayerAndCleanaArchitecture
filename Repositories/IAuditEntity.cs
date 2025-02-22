@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace App.Repositories
 {
-    public class BaseEntity<T>
+    public interface IAuditEntity
     {
-        public T Id { get; set; } = default!;
+        public DateTime Created { get; set; }
+
+        public DateTime? Updated { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Repositories.Categories
 {
-    public class CategoryRepository(AppDBContext context) : GenericRepository<Category>(context), ICategoryRepository
+    public class CategoryRepository(AppDBContext context) : GenericRepository<Category,int>(context), ICategoryRepository
     {
        
         public Task<Category?> GetCategoryWithProductsAsync(int id)

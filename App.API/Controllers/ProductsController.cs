@@ -1,4 +1,6 @@
-﻿using App.Services;
+﻿using App.Repositories.Products;
+using App.Services;
+using App.Services.Filters;
 using App.Services.Products;
 using App.Services.Products.Create;
 using App.Services.Products.Update;
@@ -53,6 +55,8 @@ namespace App.API.Controllers
 
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Product, int>))]
+
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(int id, UpdateProductRequest req) => CreateActionResult(await productService.UpdateAsync(id, req));
 
@@ -62,6 +66,8 @@ namespace App.API.Controllers
             return CreateActionResult(await productService.UpdateStockAsync(req));
         }
 
+
+        [ServiceFilter(typeof(NotFoundFilter<Product,int>))]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {

@@ -80,20 +80,17 @@ namespace App.Services.Categories
 
         public async Task<ServiceResult> UpdateAsync(int id, UpdateCategoryRequest request)
         {
-            var category = await categoryRepository.GetByIdAsync(id);
-            if (category == null)
-            {
-                return ServiceResult.Fail("Kategori bulunamadı", HttpStatusCode.NotFound);
-            }
+         
 
-            var isCategoryExist = await categoryRepository.Where(x => x.Name == category.Name && x.Id != category.Id).AnyAsync();
+            var isCategoryExist = await categoryRepository.Where(x => x.Name == request.Name && x.Id != id).AnyAsync();
 
             if (isCategoryExist)
             {
                 return ServiceResult.Fail("Kategori ismi veritabanında bulunamadı", HttpStatusCode.BadRequest);
             }
 
-            category = mapper.Map(request, category);
+           var category = mapper.Map<Category>(request);
+            category.Id= id;
             categoryRepository.Update(category);
             await unitOfWork.SaveChangesAsync();
             return ServiceResult.Success(HttpStatusCode.NoContent);
